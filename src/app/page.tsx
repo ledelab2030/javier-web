@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Smile, TrendingUp, Handshake, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function JavierPage() {
   const [info, setInfo] = useState<string | null>(null);
 
   useEffect(() => {
-    // Evento: Scroll al 50%
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const totalHeight = document.body.scrollHeight;
@@ -25,7 +25,6 @@ export default function JavierPage() {
     };
     window.addEventListener("scroll", handleScroll);
 
-    // Evento: Tiempo activo > 30s
     const timer = setTimeout(() => {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", "tiempo_30s", {
@@ -68,7 +67,7 @@ export default function JavierPage() {
         jAvIer no es un asistente técnico, es un compañero de conversación diseñado para apoyar a Leonardo y a otros con curiosidad, ética y propósito.
       </p>
 
-      <div className="mb-12">
+      <div className="mb-12 flex gap-4">
         <Button
           asChild
           onClick={() => {
@@ -87,6 +86,10 @@ export default function JavierPage() {
           >
             Prueba jAvIer
           </a>
+        </Button>
+
+        <Button asChild>
+          <Link href="/leonardo">Sobre Leonardo</Link>
         </Button>
       </div>
 
