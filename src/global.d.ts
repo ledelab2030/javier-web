@@ -1,7 +1,7 @@
+export {};
+
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag: (...args: [string, string, Record<string, unknown>]) => void;
   }
 }
-
-export {};
