@@ -3,9 +3,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Smile, TrendingUp, Handshake, Heart } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function JavierPage() {
+  const [info, setInfo] = useState<string | null>(null);
+
   useEffect(() => {
     // Evento: Scroll al 50%
     const handleScroll = () => {
@@ -38,6 +40,10 @@ export default function JavierPage() {
       clearTimeout(timer);
     };
   }, []);
+
+  const handleInfoClick = (message: string) => {
+    setInfo(prev => (prev === message ? null : message));
+  };
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-8">
@@ -85,24 +91,56 @@ export default function JavierPage() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <Card className="flex flex-col items-center p-4">
+        <Card
+          onClick={() => handleInfoClick("Creer en un futuro mejor impulsa acciones positivas hoy.")}
+          className="flex flex-col items-center p-4 cursor-pointer"
+        >
           <Smile className="w-8 h-8 mb-2" />
           <CardContent className="p-0 text-center">Optimismo</CardContent>
+          {info === "Creer en un futuro mejor impulsa acciones positivas hoy." && (
+            <p className="mt-2 text-sm text-gray-500 text-center">
+              Creer en un futuro mejor impulsa acciones positivas hoy.
+            </p>
+          )}
         </Card>
 
-        <Card className="flex flex-col items-center p-4">
+        <Card
+          onClick={() => handleInfoClick("El aprendizaje y la curiosidad nos mantienen en evolución.")}
+          className="flex flex-col items-center p-4 cursor-pointer"
+        >
           <TrendingUp className="w-8 h-8 mb-2" />
           <CardContent className="p-0 text-center">Crecimiento constante</CardContent>
+          {info === "El aprendizaje y la curiosidad nos mantienen en evolución." && (
+            <p className="mt-2 text-sm text-gray-500 text-center">
+              El aprendizaje y la curiosidad nos mantienen en evolución.
+            </p>
+          )}
         </Card>
 
-        <Card className="flex flex-col items-center p-4">
+        <Card
+          onClick={() => handleInfoClick("Colaborar sin perder autonomía es clave para construir juntos.")}
+          className="flex flex-col items-center p-4 cursor-pointer"
+        >
           <Handshake className="w-8 h-8 mb-2" />
           <CardContent className="p-0 text-center">Independencia colaborativa</CardContent>
+          {info === "Colaborar sin perder autonomía es clave para construir juntos." && (
+            <p className="mt-2 text-sm text-gray-500 text-center">
+              Colaborar sin perder autonomía es clave para construir juntos.
+            </p>
+          )}
         </Card>
 
-        <Card className="flex flex-col items-center p-4">
+        <Card
+          onClick={() => handleInfoClick("Cuidar hoy lo que importa evita riesgos mañana.")}
+          className="flex flex-col items-center p-4 cursor-pointer"
+        >
           <Heart className="w-8 h-8 mb-2" />
           <CardContent className="p-0 text-center">Prevención en salud</CardContent>
+          {info === "Cuidar hoy lo que importa evita riesgos mañana." && (
+            <p className="mt-2 text-sm text-gray-500 text-center">
+              Cuidar hoy lo que importa evita riesgos mañana.
+            </p>
+          )}
         </Card>
       </div>
 
