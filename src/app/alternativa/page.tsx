@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function JavierAlternativo() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-6 py-12">
@@ -7,9 +9,11 @@ export default function JavierAlternativo() {
       </p>
 
       <div className="mb-8">
-        <img
+        <Image
           src="/family-cooking.jpg"
           alt="Familia en un momento cotidiano"
+          width={400}
+          height={300}
           className="rounded-2xl shadow-md w-full max-w-md object-cover"
         />
       </div>
@@ -28,13 +32,6 @@ export default function JavierAlternativo() {
         className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg shadow-md mb-4"
       >
         🗨️ Quiero conversar con jAvIer
-      </a>
-
-      <a
-        href="/alternativa-en"
-        className="text-sm text-blue-600 underline mb-10"
-      >
-        Ver versión en inglés
       </a>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl text-center">
@@ -61,7 +58,7 @@ export default function JavierAlternativo() {
       <div className="mt-12 text-center text-gray-500 text-sm max-w-xl">
         <p>¿Se guardan mis datos? No. Solo tú decides si quieres generar un resumen y compartirlo. La conversación es privada.</p>
         <p className="mt-4">Proyecto de Tesis de Maestría en Tecnología Educativa - Universidad de Tartu, 2025</p>
-        <p>Contacto: tu-email@example.com</p>
+        <p>Contacto: tu-correo@example.com</p>
       </div>
     </div>
   );
