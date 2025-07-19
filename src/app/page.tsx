@@ -10,6 +10,10 @@ export default function JavierPage() {
   const [info, setInfo] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "jAvIer – Acompañante en Salud y Sostenibilidad";
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const totalHeight = document.body.scrollHeight;
