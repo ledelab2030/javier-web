@@ -25,9 +25,16 @@ export default function JavierAlternativo() {
         href="https://chatgpt.com/g/g-67e32e0e5d108191a26d755114ea55f0-javier-acompanante-en-salud-y-sostenibilidad"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg shadow-md mb-10"
+        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg shadow-md mb-4"
       >
         🗨️ Quiero conversar con jAvIer
+      </a>
+
+      <a
+        href="/alternativa-en"
+        className="text-sm text-blue-600 underline mb-10"
+      >
+        Ver versión en inglés
       </a>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl text-center">
