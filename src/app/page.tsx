@@ -6,6 +6,10 @@ import { Smile, TrendingUp, Handshake, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "jAvIer – Acompañante en Salud y Sostenibilidad",
+  description: "Un compañero digital para decisiones guiadas por pasión, salud y crecimiento.",
+};
 export default function JavierPage() {
   const [info, setInfo] = useState<string | null>(null);
 
