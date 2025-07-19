@@ -3,8 +3,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Smile, TrendingUp, Handshake, Heart } from "lucide-react";
+import { useEffect } from "react";
 
 export default function JavierPage() {
+  useEffect(() => {
+    // Evento: Scroll al 50%
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const totalHeight = document.body.scrollHeight;
+      if (scrollPosition >= totalHeight * 0.5) {
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag("event", "scroll_50", {
+            event_category: "Scroll",
+            event_label: "Scroll al 50%",
+          });
+        }
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    // Evento: Tiempo activo > 30s
+    const timer = setTimeout(() => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "tiempo_30s", {
+          event_category: "Tiempo",
+          event_label: "30 segundos activos",
+        });
+      }
+    }, 30000);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-8">
       <h1 className="text-4xl font-bold mb-4">
@@ -29,7 +63,17 @@ export default function JavierPage() {
       </p>
 
       <div className="mb-12">
-        <Button asChild>
+        <Button
+          asChild
+          onClick={() => {
+            if (typeof window !== "undefined" && window.gtag) {
+              window.gtag("event", "click_prueba_javier", {
+                event_category: "Botón",
+                event_label: "Prueba jAvIer",
+              });
+            }
+          }}
+        >
           <a
             href="https://chatgpt.com/g/g-67e32e0e5d108191a26d755114ea55f0-javier-acompanante-en-salud-y-sostenibilidad"
             target="_blank"
