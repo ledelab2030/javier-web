@@ -18,6 +18,12 @@ export default function JavierPage() {
       >
         🗨️ Quiero conversar con jAvIer
       </a>
+      <a
+  href="/sobre_javier"
+  className="text-blue-600 underline mt-4 block text-center"
+>
+  ¿Sabes sobre jAvIer?
+</a>
     </div>
   );
 }
