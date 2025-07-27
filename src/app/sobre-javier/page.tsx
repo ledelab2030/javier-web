@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -23,6 +24,11 @@ export default function Page() {
         ideas o preparar proyectos. Es, en esencia, un reflejo de tu mejor versión cognitiva,
         entrenado para colaborar en tu proceso de crecimiento personal y colectivo.
       </p>
+      <div className="mt-6">
+        <Link href="/">
+          <span className="text-blue-600 hover:underline">← Volver al inicio</span>
+        </Link>
+      </div>
     </main>
   );
 }
