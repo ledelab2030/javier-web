@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function NoticiasNeutralHome() {
+export default function NoticiasFeed() {
   const articulos = [
     {
       slug: 'universidades-chinas',
@@ -24,15 +24,13 @@ export default function NoticiasNeutralHome() {
 
   return (
     <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">📰 Noticias Neutral</h1>
-      <p className="text-gray-700 mb-6">
-        Un ejercicio periodístico centrado en hechos verificables. Aquí reescribimos noticias actuales sin adornos, ni sensacionalismo, ni sesgos innecesarios.
-      </p>
-
+      <h1 className="text-3xl font-bold mb-6">📰 Noticias Neutral</h1>
+      <p className="text-sm text-gray-500 mb-8">Periodismo claro y sin adornos. Basado en hechos verificables.</p>
+      
       <ul className="space-y-6">
         {articulos.map(({ slug, titulo, resumen, fecha }) => (
           <li key={slug} className="border-b pb-4">
-            <Link href={`/${slug}`}>
+            <Link href={`/src/app/${slug}`}>
               <h2 className="text-xl font-semibold text-blue-600 hover:underline">{titulo}</h2>
             </Link>
             <p className="text-sm text-gray-600">{fecha}</p>
@@ -40,12 +38,6 @@ export default function NoticiasNeutralHome() {
           </li>
         ))}
       </ul>
-
-      <footer className="mt-10 pt-6 border-t text-sm text-gray-500">
-        <p>
-          Esta sección es curada por <Link href="/sobre-javier" className="text-blue-600 underline">jAvIer</Link>, un acompañante digital diseñado para fomentar el pensamiento crítico, la agencia moral y la sostenibilidad humana.
-        </p>
-      </footer>
     </main>
   );
 }
