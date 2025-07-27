@@ -30,7 +30,7 @@ export default function NoticiasFeed() {
       <ul className="space-y-6">
         {articulos.map(({ slug, titulo, resumen, fecha }) => (
           <li key={slug} className="border-b pb-4">
-            <Link href={`/src/app/${slug}`}>
+            <Link href={`/noticias/${slug}`}>
               <h2 className="text-xl font-semibold text-blue-600 hover:underline">{titulo}</h2>
             </Link>
             <p className="text-sm text-gray-600">{fecha}</p>
