@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 const noticias = [
   {
-    slug: 'petro-independencia-judicial',
-    titulo: 'Petro defiende independencia judicial; Uribe responde criticando presunta presión',
-    fecha: '27 de julio de 2025',
-  },
-  {
     slug: 'petro-lenguaje-politico',
     titulo: 'El lenguaje político contra Petro es inusual',
+    fecha: '26 de julio de 2025',
+  },
+  {
+    slug: 'israel-barco-humanitario',
+    titulo: 'Israel intercepta barco humanitario con pañales y leche',
     fecha: '26 de julio de 2025',
   },
   {
@@ -22,6 +22,11 @@ const noticias = [
 export default function HomePage() {
   return (
     <main className="max-w-3xl mx-auto px-6 space-y-10">
+      <nav className="flex justify-end space-x-6 py-4">
+        <Link href="/noticias" className="text-blue-600 hover:underline">Noticias</Link>
+        <Link href="/sobre-nosotros" className="text-blue-600 hover:underline">Sobre nosotros</Link>
+      </nav>
+
       <section>
         <h1 className="text-4xl font-bold mb-4">Hola, soy Javier</h1>
         <p className="text-lg text-gray-700">
