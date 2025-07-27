@@ -25,6 +25,7 @@ export default function HomePage() {
       <nav className="flex justify-end space-x-6 py-4">
         <Link href="/noticias" className="text-blue-600 hover:underline">Noticias</Link>
         <Link href="/sobre-nosotros" className="text-blue-600 hover:underline">Sobre nosotros</Link>
+        <Link href="/contacto" className="text-blue-600 hover:underline">Contáctenos</Link>
       </nav>
 
       <section>
