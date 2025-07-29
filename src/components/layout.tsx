@@ -48,14 +48,14 @@ export default function RootLayout({
                   subMenuOpen ? 'block' : 'hidden'
                 } sm:group-hover:block`}
               >
-                <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100">Neutralizadas</Link>
-                <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100">LedeLab</Link>
-                <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100">jAvIer</Link>
+                <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100" onClick={() => { setSubMenuOpen(false); setMenuOpen(false); }}>Neutralizadas</Link>
+                <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100" onClick={() => { setSubMenuOpen(false); setMenuOpen(false); }}>LedeLab</Link>
+                <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100" onClick={() => { setSubMenuOpen(false); setMenuOpen(false); }}>jAvIer</Link>
               </div>
             </div>
 
-            <Link href="/ledelab/sobre-nosotros" className="text-blue-600 hover:underline">Sobre nosotros</Link>
-            <Link href="/ledelab/contacto" className="text-blue-600 hover:underline">Contáctenos</Link>
+            <Link href="/ledelab/sobre-nosotros" className="text-blue-600 hover:underline" onClick={() => setMenuOpen(false)}>Sobre nosotros</Link>
+            <Link href="/ledelab/contacto" className="text-blue-600 hover:underline" onClick={() => setMenuOpen(false)}>Contáctenos</Link>
           </nav>
         </header>
 
