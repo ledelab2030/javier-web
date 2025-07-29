@@ -4,6 +4,7 @@ import '@/app/globals.css'
 import Link from 'next/link';
 import React, { useState } from 'react';
 
+
 export default function RootLayout({
   children,
 }: {
@@ -28,11 +29,9 @@ export default function RootLayout({
           </button>
 
           {/* Menú de navegación */}
-          <nav
-            className={`${
-              menuOpen ? 'block' : 'hidden'
-            } flex flex-col sm:flex-row text-sm items-start sm:items-center gap-4 sm:gap-6 relative w-full sm:w-auto`}
-          >
+         <nav
+  className={`flex flex-col sm:flex sm:flex-row text-sm items-start sm:items-center gap-6 relative w-full sm:w-auto`}
+>
             {/* Menú desplegable Noticias */}
             <div className="relative group">
               <span className="text-blue-600 hover:underline cursor-pointer">Noticias</span>
