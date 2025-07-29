@@ -10,8 +10,15 @@ export default function NoticiasLedeLab() {
         colaboraciones y avances desde el laboratorio vivo de LedeLab.
       </p>
 
-      {/* Placeholder temporal */}
       <ul className="list-disc pl-5 text-gray-600 space-y-2">
         <li>Pronto compartiremos nuestras últimas novedades…</li>
         <li>
-          Mientras tanto, conoce más sobre nuestras{" 
+          Mientras tanto, conoce más sobre nuestras{' '}
+          <Link href="/ledelab" className="text-blue-600 hover:underline">
+            iniciativas activas
+          </Link>.
+        </li>
+      </ul>
+    </main>
+  );
+}
