@@ -21,14 +21,15 @@ export default function RootLayout({
           </h1>
           <nav className="text-sm flex items-center gap-6 relative">
             {/* Menú desplegable Noticias con zona extendida para mantener hover */}
-            <div className="relative group">
-              <span className="text-blue-600 hover:underline cursor-pointer">Noticias</span>
-              <div className="absolute left-0 mt-2 bg-white border rounded shadow-md z-50 w-48 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200">
-                <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100">Neutralizadas</Link>
-                <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100">LedeLab</Link>
-                <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100">jAvIer</Link>
-              </div>
-            </div>
+           <div className="relative group">
+  <span className="text-blue-600 hover:underline cursor-pointer">Noticias</span>
+  <div className="absolute left-0 top-full pt-2 bg-white border rounded shadow-md z-50 w-48 hidden group-hover:block">
+    <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100">Neutralizadas</Link>
+    <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100">LedeLab</Link>
+    <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100">jAvIer</Link>
+  </div>
+</div>
+
 
             {/* Otros enlaces */}
             <Link href="/ledelab/sobre-nosotros" className="text-blue-600 hover:underline">Sobre nosotros</Link>

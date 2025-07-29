@@ -1,4 +1,4 @@
-// src/app/ledelab/layout.tsx
+// src/app/layout.tsx
 import React from "react";
 import Layout from "@/components/layout";
 
