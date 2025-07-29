@@ -4,11 +4,6 @@ import '@/app/globals.css'
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export const metadata = {
-  title: 'LedeLab Group',
-  description: 'Inspirando futuros sostenibles con ciencia, tecnología y humanismo.',
-};
-
 export default function RootLayout({
   children,
 }: {
