@@ -63,8 +63,12 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="border-t py-6 px-6 text-sm text-gray-500 text-center">
+        <footer className="border-t py-6 px-6 text-sm text-gray-500 text-center space-y-2">
           © 2025 LedeLab Group · Inspirando futuros sostenibles.
+          <div className="flex justify-center gap-4 text-blue-600">
+            <Link href="/">Inicio</Link>
+            <Link href="#" onClick={() => window.history.back()}>Volver</Link>
+          </div>
         </footer>
       </body>
     </html>
