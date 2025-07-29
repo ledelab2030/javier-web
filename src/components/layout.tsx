@@ -15,15 +15,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="bg-white text-gray-900">
-        <header className="border-b py-4 px-6 flex justify-between items-center">
+        <header className="border-b py-4 px-6 flex flex-wrap justify-between items-center gap-4 sm:gap-6">
           <h1 className="text-xl font-bold">
             <Link href="/">LedeLab</Link>
           </h1>
-          <nav className="space-x-6 text-sm flex items-center gap-6">
-            {/* Menú desplegable Noticias */}
+          <nav className="text-sm flex items-center gap-6 relative">
+            {/* Menú desplegable Noticias con zona extendida para mantener hover */}
             <div className="relative group">
               <span className="text-blue-600 hover:underline cursor-pointer">Noticias</span>
-              <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 z-50 w-48">
+              <div className="absolute left-0 mt-2 bg-white border rounded shadow-md z-50 w-48 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200">
                 <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100">Neutralizadas</Link>
                 <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100">LedeLab</Link>
                 <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100">jAvIer</Link>
