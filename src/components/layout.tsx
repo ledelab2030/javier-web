@@ -1,5 +1,5 @@
 // app/layout.tsx
-import './globals.css' // importa tus estilos globales si usas Tailwind
+import '@/app/globals.css' // importa tus estilos globales si usas Tailwind
 import Link from 'next/link';
 import React from 'react';
 
