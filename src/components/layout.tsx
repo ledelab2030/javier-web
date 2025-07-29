@@ -31,12 +31,12 @@ export default function RootLayout({
           <nav
             className={`${
               menuOpen ? 'block' : 'hidden'
-            } sm:flex text-sm items-start sm:items-center gap-6 relative w-full sm:w-auto`}
+            } flex flex-col sm:flex-row text-sm items-start sm:items-center gap-4 sm:gap-6 relative w-full sm:w-auto`}
           >
             {/* Menú desplegable Noticias */}
             <div className="relative group">
               <span className="text-blue-600 hover:underline cursor-pointer">Noticias</span>
-              <div className="absolute left-0 top-full pt-2 bg-white border rounded shadow-md z-50 w-48 hidden group-hover:block sm:block">
+              <div className="absolute left-0 top-full pt-2 bg-white border rounded shadow-md z-50 w-48 hidden group-hover:block sm:group-hover:block">
                 <Link href="/noticias" className="block px-4 py-2 hover:bg-gray-100">Neutralizadas</Link>
                 <Link href="/ledelab/noticias" className="block px-4 py-2 hover:bg-gray-100">LedeLab</Link>
                 <Link href="/javier/noticias" className="block px-4 py-2 hover:bg-gray-100">jAvIer</Link>
