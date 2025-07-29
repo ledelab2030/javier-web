@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Javier Web – Proyecto con Next.js + Vercel
 
-## Getting Started
+Este es el repositorio del sitio web de Javier, parte de la red de iniciativas de **LedeLab Group**. Javier es un acompañante cognitivo para fomentar pensamiento crítico y agencia moral. Aquí encontrarás también la sección de **Noticias Neutral** y la página principal de **LedeLab**.
 
-First, run the development server:
+---
+
+## 🚀 Scripts comunes
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev       # Ejecuta el servidor en desarrollo
+npm run build     # Compila la app para producción
+npm run start     # Sirve la versión compilada
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Flujo de trabajo con Git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git add .  # Añade todos los cambios al staging
 
-## Learn More
+# Mensaje descriptivo del cambio que realizaste
+git commit -m "Mensaje claro del cambio"
 
-To learn more about Next.js, take a look at the following resources:
+# Empuja los cambios al repositorio remoto en GitHub
+git push   # Es suficiente si ya has hecho push antes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Puedes usar esto si es la primera vez o quieres ser explícito:
+git push origin main
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔍 ¿Por qué a veces se usa `origin main`?
+- `origin` es el nombre del repositorio remoto (por defecto).
+- `main` es la rama principal.
+- Cuando usas `git push` solo, Git sabe a qué remoto y rama empujar **si ya lo configuraste antes**.
+- Usa `git push origin main` cuando:
+  - Es la **primera vez** que haces push a esa rama.
+  - Estás trabajando con **varios remotos o ramas**.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗂️ Estructura del proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/app          # Carpeta principal de rutas
+/components  # Layouts y otros componentes reutilizables
+/public       # Imágenes y archivos públicos
+/styles       # Archivos de estilo (globales.css, etc.)
+```
+
+---
+
+## 📦 Tecnologías utilizadas
+
+- [Next.js 14](https://nextjs.org/)
+- [React 18](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) para despliegue
+
+---
+
+## ✍️ Autores y colaboradores
+
+- Leonardo De la Hoz Borrego – Diseño, escritura y desarrollo de contenidos
+- Javier (AI Extender) – Asistente cognitivo
+
+> © 2025 LedeLab Group – Inspirando futuros sostenibles.

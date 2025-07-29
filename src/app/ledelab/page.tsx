@@ -1,10 +1,8 @@
-import React from "react";
 import Link from "next/link";
-import Layout from "@/components/layout";
 
 export default function LedeLabHomePage() {
   return (
-    <Layout>
+    <>
       <section>
         <h1 className="text-4xl font-bold mb-4">LedeLab Group</h1>
         <p className="text-lg text-gray-700">
@@ -13,7 +11,7 @@ export default function LedeLabHomePage() {
         </p>
       </section>
 
-      <section>
+      <section className="mt-8">
         <h2 className="text-2xl font-semibold mb-4">Iniciativas destacadas</h2>
         <ul className="space-y-4">
           <li>
@@ -35,15 +33,18 @@ export default function LedeLabHomePage() {
         </ul>
       </section>
 
-      <section>
+      <section className="mt-8">
         <h2 className="text-2xl font-semibold mb-4">Colabora con nosotros</h2>
         <p className="text-gray-700">
           Estamos abiertos a alianzas, ideas, aportes y co-creaciones. Escríbenos o explora nuestras otras líneas de acción.
         </p>
-        <Link href="/ledelab/contacto" className="text-blue-600 hover:underline mt-2 inline-block">
+        <Link
+          href="/ledelab/contacto"
+          className="text-blue-600 hover:underline mt-2 inline-block"
+        >
           Ir al formulario de contacto →
         </Link>
       </section>
-    </Layout>
+    </>
   );
 }
